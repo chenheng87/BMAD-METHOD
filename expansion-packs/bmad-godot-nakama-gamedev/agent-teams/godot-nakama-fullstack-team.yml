@@ -1,0 +1,199 @@
+name: Godot + Nakama Fullstack Development Team
+description: Complete multiplayer game development team specializing in Godot client and Nakama server integration with brownfield expertise
+
+leader: godot-nakama-orchestrator
+
+members:
+  - godot-nakama-orchestrator
+  - godot-project-analyzer  
+  - multiplayer-architect
+  - godot-client-dev
+  - nakama-server-dev
+
+workflows:
+  brownfield_integration:
+    description: Safe integration of multiplayer into existing Godot projects
+    phases:
+      - name: project_analysis
+        leader: godot-project-analyzer
+        participants: [godot-nakama-orchestrator]
+        deliverables:
+          - project_analysis_report
+          - compatibility_assessment
+          - integration_strategy
+        
+      - name: architecture_design
+        leader: multiplayer-architect
+        participants: [godot-nakama-orchestrator, godot-project-analyzer]
+        deliverables:
+          - client_server_architecture
+          - network_sync_strategy
+          - integration_plan
+          
+      - name: parallel_development
+        leader: godot-nakama-orchestrator
+        participants: [godot-client-dev, nakama-server-dev]
+        deliverables:
+          - godot_client_implementation
+          - nakama_server_modules
+          - integration_testing
+          
+      - name: validation_deployment
+        leader: godot-nakama-orchestrator
+        participants: [godot-project-analyzer, godot-client-dev, nakama-server-dev]
+        deliverables:
+          - compatibility_validation
+          - performance_testing
+          - deployment_preparation
+
+  greenfield_multiplayer:
+    description: Building multiplayer games from scratch
+    phases:
+      - name: requirements_architecture
+        leader: godot-nakama-orchestrator
+        participants: [multiplayer-architect]
+        deliverables:
+          - multiplayer_requirements
+          - system_architecture
+          
+      - name: foundation_setup
+        leader: multiplayer-architect
+        participants: [godot-client-dev, nakama-server-dev]
+        deliverables:
+          - project_foundation
+          - core_networking
+          
+      - name: feature_development
+        leader: godot-nakama-orchestrator
+        participants: [godot-client-dev, nakama-server-dev]
+        deliverables:
+          - game_features
+          - multiplayer_systems
+          
+      - name: optimization_deployment
+        leader: godot-nakama-orchestrator
+        participants: [godot-client-dev, nakama-server-dev]
+        deliverables:
+          - performance_optimization
+          - production_deployment
+
+collaboration_patterns:
+  - name: daily_coordination
+    frequency: daily
+    participants: [godot-nakama-orchestrator, godot-client-dev, nakama-server-dev]
+    purpose: Sync development progress and resolve blockers
+    
+  - name: architecture_review
+    frequency: weekly
+    participants: [godot-nakama-orchestrator, multiplayer-architect, godot-project-analyzer]
+    purpose: Review architecture decisions and integration approach
+    
+  - name: integration_checkpoint
+    frequency: milestone
+    participants: all
+    purpose: Validate integration quality and compatibility
+
+handoff_protocols:
+  analysis_to_architecture:
+    from: godot-project-analyzer
+    to: multiplayer-architect
+    deliverables:
+      - project_analysis_report
+      - technical_constraints
+      - integration_recommendations
+    validation: architecture_feasibility_review
+    
+  architecture_to_development:
+    from: multiplayer-architect
+    to: [godot-client-dev, nakama-server-dev]
+    deliverables:
+      - technical_architecture
+      - implementation_specifications
+      - interface_definitions
+    validation: development_readiness_review
+    
+  development_to_integration:
+    from: [godot-client-dev, nakama-server-dev]
+    to: godot-nakama-orchestrator
+    deliverables:
+      - client_implementation
+      - server_implementation
+      - integration_documentation
+    validation: integration_compatibility_review
+
+quality_gates:
+  - name: brownfield_safety_gate
+    trigger: after_analysis
+    criteria:
+      - existing_functionality_preserved
+      - rollback_procedures_defined
+      - compatibility_risks_mitigated
+    responsible: godot-project-analyzer
+    
+  - name: architecture_quality_gate
+    trigger: after_architecture
+    criteria:
+      - performance_requirements_met
+      - scalability_planned
+      - security_addressed
+    responsible: multiplayer-architect
+    
+  - name: implementation_quality_gate
+    trigger: after_development
+    criteria:
+      - client_server_integration_working
+      - error_handling_robust
+      - performance_acceptable
+    responsible: godot-nakama-orchestrator
+    
+  - name: deployment_readiness_gate
+    trigger: before_deployment
+    criteria:
+      - comprehensive_testing_complete
+      - monitoring_systems_ready
+      - rollback_procedures_tested
+    responsible: godot-nakama-orchestrator
+
+specializations:
+  brownfield_integration:
+    focus: Safe enhancement of existing projects
+    expertise:
+      - compatibility_assessment
+      - risk_mitigation
+      - incremental_integration
+      - rollback_safety
+      
+  real_time_multiplayer:
+    focus: Low-latency competitive games
+    expertise:
+      - client_prediction
+      - lag_compensation
+      - anti_cheat_systems
+      - performance_optimization
+      
+  social_multiplayer:
+    focus: Cooperative and social gaming
+    expertise:
+      - matchmaking_systems
+      - player_communication
+      - social_features
+      - community_management
+
+success_metrics:
+  technical:
+    - network_latency: "<100ms"
+    - frame_rate_maintained: "60+ FPS"
+    - compatibility_preserved: "100%"
+    - security_vulnerabilities: "0 critical"
+    
+  project:
+    - integration_timeline: "on_schedule"
+    - brownfield_safety: "no_regression"
+    - team_coordination: "effective"
+    - quality_standards: "production_ready"
+    
+  user_experience:
+    - multiplayer_functionality: "smooth"
+    - error_handling: "graceful"
+    - performance: "responsive"
+    - learning_curve: "minimal" 
